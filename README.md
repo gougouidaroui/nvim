@@ -12,3 +12,18 @@ sudo apt-get install ninja-build gettext cmake unzip curl</pre>
 <pre>
 cd ~/.config && mkdir nvim && cd nvim && echo "require('yoon')" > init.lua && \
 mkdir lua && cd lua && mkdir yoon && cd yoon && touch init.lua && nvim +w +so +q .</pre>
+
+# Remap keybinds
+<pre>
+  touch remap.lua && echo "vim.g.mapleader = ' '" > remap.lua && echo "vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)" >> remap.lua &&\
+    nvim +w +so +q ./remap.lua</pre>
+
+# Download packer
+<pre>
+  git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim</pre>
+# Config packer
+<pre>
+echo "vim.cmd [[packadd packer.nvim]]" >> packer.lua && echo "return require('packer').startup(function(use)" >> packer.lua && \
+  echo "  use 'wbthomason/packer.nvim'" >> packer.lua && echo "end)" >> packer.lua && nvim +w +so +PackerSync ./packer.lua
+</pre>
