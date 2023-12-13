@@ -11,5 +11,4 @@ sudo apt-get install ninja-build gettext cmake unzip curl</pre>
 # Setup config directory
 <pre>
 cd ~/.config && mkdir nvim && cd nvim && echo "require('yoon')" > init.lua && \
-mkdir lua && cd lua && mkdir yoon && cd yoon && touch init.lua && nvim .</pre>
-open init.lua and :so 
+mkdir lua && cd lua && mkdir yoon && cd yoon && touch init.lua && nvim +w +so +q .</pre>
