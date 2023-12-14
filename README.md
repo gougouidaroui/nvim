@@ -76,3 +76,11 @@ mkdir -p lua/yoon && cd lua/yoon && touch init.lua && nvim +w +so +q .</pre>
 </pre>
 
 make sure mason downloaded the following LSPs:
+<pre>
+  html-lsp
+  lua-language-server
+  python-lsp-server
+  rust-analyzer
+  typescript-language-server
+  vim-language-server
+</pre>
