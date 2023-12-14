@@ -24,5 +24,5 @@ mkdir lua && cd lua && mkdir yoon && cd yoon && touch init.lua && nvim +w +so +q
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim</pre>
 # Config packer
 <pre>
-  wget https://raw.githubusercontent.com/gougouidaroui/nvim/main/packer.lua && nvim +w +so +PackerSync ./packer.lua
+  wget https://raw.githubusercontent.com/gougouidaroui/nvim/main/lua/yoon/packer.lua && nvim +w +so +PackerSync ./packer.lua
 </pre>
