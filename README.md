@@ -16,71 +16,71 @@ mkdir -p lua/yoon && cd lua/yoon && touch init.lua && nvim +w +so +q .</pre>
 
 # Remap keybinds
 <pre>
-  touch remap.lua && echo "vim.g.mapleader = ' '" > remap.lua && echo "vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)" >> remap.lua &&\
+touch remap.lua && echo "vim.g.mapleader = ' '" > remap.lua && echo "vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)" >> remap.lua &&\
     nvim +w +so +q ./remap.lua</pre>
 
 ## Packer
 # Download packer
 <pre>
-  git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim</pre>
 # Config packer
 <pre>
-  wget https://raw.githubusercontent.com/gougouidaroui/nvim/main/lua/yoon/packer.lua && nvim +w +so +PackerSync ./packer.lua
+wget https://raw.githubusercontent.com/gougouidaroui/nvim/main/lua/yoon/packer.lua && nvim +w +so +PackerSync ./packer.lua
 </pre>
 
 ## Setup plugins
 # Set color theme for buffer
 <pre>
-  cd ~/.config/nvim/ && mkdir -p after/plugin && cd after/plugin && wget https://raw.githubusercontent.com/gougouidaroui/nvim/main/after/plugin/colors.lua && nvim +so +q ./colors.lua
+cd ~/.config/nvim/ && mkdir -p after/plugin && cd after/plugin && wget https://raw.githubusercontent.com/gougouidaroui/nvim/main/after/plugin/colors.lua && nvim +so +q ./colors.lua
 </pre>
 
 # Telescope
 <pre>
-  wget https://raw.githubusercontent.com/gougouidaroui/nvim/main/after/plugin/telescope.lua && nvim +so ./telescope.lua
+wget https://raw.githubusercontent.com/gougouidaroui/nvim/main/after/plugin/telescope.lua && nvim +so ./telescope.lua
 </pre>
 
 # Fugitive
 <pre>
-  wget https://raw.githubusercontent.com/gougouidaroui/nvim/main/after/plugin/fugitive.lua && nvim +so ./fugitive.lua
+wget https://raw.githubusercontent.com/gougouidaroui/nvim/main/after/plugin/fugitive.lua && nvim +so ./fugitive.lua
 </pre>
 
 # Treesitter
 <pre>
-  wget https://raw.githubusercontent.com/gougouidaroui/nvim/main/after/plugin/treesitter.lua && nvim +so ./treesitter.lua
+wget https://raw.githubusercontent.com/gougouidaroui/nvim/main/after/plugin/treesitter.lua && nvim +so ./treesitter.lua
 </pre>
 
 # Undotree
 <pre>
-  wget https://raw.githubusercontent.com/gougouidaroui/nvim/main/after/plugin/undotree.lua && nvim +so ./undotree.lua
+wget https://raw.githubusercontent.com/gougouidaroui/nvim/main/after/plugin/undotree.lua && nvim +so ./undotree.lua
 </pre>
 
 # Harpoon
 <pre>
-  wget https://raw.githubusercontent.com/gougouidaroui/nvim/main/after/plugin/harpoon.lua && nvim +so ./harpoon.lua
+wget https://raw.githubusercontent.com/gougouidaroui/nvim/main/after/plugin/harpoon.lua && nvim +so ./harpoon.lua
 </pre>
 
 ## Setup LSP
 # Download npm
 <pre>
-  sudo apt install npm
+sudo apt install npm
 </pre>
 # Download python3.11-venv
 <pre>
-  sudo apt install python3.11-venv
+sudo apt install python3.11-venv
 </pre>
 
 # LSP config file
 <pre>
-  wget https://raw.githubusercontent.com/gougouidaroui/nvim/main/after/plugin/lsp.lua && nvim +so ./lsp.lua
+wget https://raw.githubusercontent.com/gougouidaroui/nvim/main/after/plugin/lsp.lua && nvim +so ./lsp.lua
 </pre>
 
 make sure mason downloaded the following LSPs:
 <pre>
-  html-lsp
-  lua-language-server
-  python-lsp-server
-  rust-analyzer
-  typescript-language-server
-  vim-language-server
+html-lsp
+lua-language-server
+python-lsp-server
+rust-analyzer
+typescript-language-server
+vim-language-server
 </pre>
