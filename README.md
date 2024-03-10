@@ -12,7 +12,7 @@ sudo apt-get install ninja-build gettext cmake unzip curl</pre>
 # Setup config directory
 <pre>
 cd ~/.config && mkdir nvim && cd nvim && echo "require('yoon')" > init.lua && \
-mkdir -p lua/yoon && cd lua/yoon && touch init.lua && nvim +w +so +q .</pre>
+mkdir -p lua/yoon && cd lua/yoon && echo "require('yoon.remap')" > init.lua && nvim +w +so +q .</pre>
 
 # Remap keybinds
 <pre>
